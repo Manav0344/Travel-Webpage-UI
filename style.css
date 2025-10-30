@@ -12,9 +12,9 @@ body {
 
 .line {
     background-color: #793740;
-    /* Corrected to match the card line color for consistency */
+   
     width: 60px;
-    /* Increased width to be visible */
+   
     height: 3px;
     margin: 10px auto;
     border-radius: 5px;
@@ -22,11 +22,11 @@ body {
 
 .hero-container {
     height: 600px;
-    /* Consolidated and corrected background properties */
+    
     background-image:
         linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%),
         url('./img/hero-bg.png');
-    /* Use the relative path */
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -296,7 +296,7 @@ body {
     align-items: center;
     margin-top: 30px;
     gap: 100px;
-    max-width: 1300px;
+    /* max-width: 1300px; */
     padding: 15px 17%;
 }
 
@@ -356,8 +356,8 @@ body {
     align-items: center;
 
     gap: 100px;
-    max-width: 1300px;
-    padding: 15px 17%;
+    /* max-width: 1300px; */
+    padding: 15px 20%;
 }
 
 
