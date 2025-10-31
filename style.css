@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #fff;
+    scroll-behavior: smooth;
 }
 
 .line {
@@ -24,7 +29,7 @@ body {
     height: 600px;
     
     background-image:
-        linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
         url('./img/hero-bg.png');
     
     background-size: cover;
@@ -558,6 +563,7 @@ body {
     max-width: 1300px;
     padding: 10px 15%;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .footerbox h4 {
@@ -599,6 +605,57 @@ body {
 }
 
 
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease, color 0.4s ease;
+    z-index: 1000;
+}
+
+.navbar a,
+.logo,
+.explore-btn {
+    color: #fff;
+    transition: color 0.4s ease;
+}
+
+/* When scrolled */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled a,
+.navbar.scrolled .logo,
+.navbar.scrolled .explore-btn {
+    color: #fff;
+}
+
+
+.navbar.scrolled .explore-btn {
+    /* background-color: #000; */
+    color: #fff;
+}
+
+
+.menu-toggle,
+.close-menu {
+  display: none;
+}
+
+
+
+.navbar.scrolled .menu-toggle {
+    color: #fff;
+}
 
 
 
@@ -649,6 +706,8 @@ body {
     }
 }
 
+
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -656,6 +715,10 @@ body {
     }
 
     .nav-links {
+        display: none;
+    }
+
+    .header{
         display: none;
     }
 
@@ -710,4 +773,74 @@ body {
         font-size: 0.95rem;
     }
 
+
+     .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.5s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links li a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links li a:hover {
+    color: #ff4d05;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    position: absolute;
+    right: 20px;
+    
+  }
+
+  .close-menu {
+    display: none;
+    position: fixed;
+    /* top: 25px; */
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1101;
+  }
+
+  .nav-links.active ~ .close-menu {
+    display: block;
+  }
+
+  .navbar .explore-btn {
+    display: none;
+  }
+
+ 
+    
 }
