@@ -825,7 +825,7 @@ body {
 
   .menu-toggle {
     display: block;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
     background: none;
     border: none;
@@ -841,7 +841,7 @@ body {
     position: fixed;
     /* top: 25px; */
     right: 30px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
     cursor: pointer;
     z-index: 1101;
