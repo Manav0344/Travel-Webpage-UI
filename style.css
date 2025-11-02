@@ -718,12 +718,23 @@ body {
         display: none;
     }
 
-    .header{
-        display: none;
-        height: 87vh;
-        background-size: cover;
+    #home{
+        height: 88vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         background-size: cover;
         background-position: center;
     }
+
+
+    header{
+        display: none;
+        /* height: 99vh; */
+       
+    }
+
+
 
     .explore-btn {
         margin-top: 10px;
